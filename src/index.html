@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First React Component</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		html,body,#app {
+			height:100%;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #eee;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		h1{
+			font-weight: 200;
+			color: #3b414c;
+			font-size: 20px;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		.app {
+			/*white-space: nowrap;*/
+			height:100%;
+		}
+		.list {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			white-space: normal;
+			height: 100%;
+			width: 33%;
+			padding: 0 20px;
+			/*overflow: auto;*/
+		}
+		.list:not(:last-child):after{
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0px;
+			width: 2px;
+			height: 99vh;
+			background: linear-gradient(to bottom, #eee, #ccc 50%, #eee);
+		}
+		.card {
+			position: relative;
+			z-index: 1;
+			background: #fff;
+			width: 100%;
+			padding: 10px 10px 10px 15px;
+			margin: 0 0 10px 0;
+			overflow: auto;
+			border: 1px solid #e5e5df;
+			border-radius: 3px;
+			box-shadow: 0 14px 35px -12px rgba(0, 0, 0, 0.56), 0 4px 22px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 0, 0, 0.2);
+		}
+		.card__title {
+			font-weight: bold;
+			border-bottom: solid 5px transparent;
+			cursor: pointer;
+			padding: 6px 0;
+		}
+		.card__title:before {
+			display: inline-block;
+			width: 1em;
+			content: '\025B8';
+			font-size: 22px;
+		}
+		.card__title--is-open:before { 
+			content: '\025BE';
+		}
+		.checklist__task:first-child {
+			margin-top: 10px;
+			padding-top: 10px;
+			border-top: dashed 1px #ddd;
+		}
+		.checklist__task--remove:after{
+			display: inline-block;
+			padding-left: 4px;
+			font-weight: bold;
+			color: #d66;
+			content: "+";
+		}
+		.checklist--add-task {
+			border: 1px dashed #bbb;
+			width: 100%;
+			padding: 10px;
+			margin-top: 5px;
+			border-radius: 3px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="root"></div>
+</body>
+</html>
